@@ -1,5 +1,5 @@
 {
-  "name": "next-fms-api-client",
+  "name": "next-fms-simple-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "date-fns": "^2.28.0",
     "fms-api-client": "^2.3.4",
     "mongodb": "^4.4.1",
     "next": "12.1.0",
