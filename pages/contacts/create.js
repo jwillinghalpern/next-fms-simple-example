@@ -34,7 +34,7 @@ export default function CrateInspectionPage() {
           ← Back
         </button>
       </div>
-      <h2>Create Inspection</h2>
+      <h2>Create Contact</h2>
       <ContactForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}

@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     res.status(200);
     res.json(result);
   } else if (req.method === 'POST') {
-    const result = await client.create('ContactsWEB', parameters, {
+    const result = await client.create('ContactsWEB', req.body, {
       script: 'DAPI_LOG',
     });
     res.status(200);
