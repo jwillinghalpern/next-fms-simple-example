@@ -8,11 +8,9 @@ export default function ContactForm({ handleChange, handleSubmit, fieldData }) {
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log('onSubmit');
     if (!formEl.current.checkValidity()) {
       return formEl.current.requestSubmit();
     }
-    console.log('calling handleSubmit');
     handleSubmit();
   }
 
