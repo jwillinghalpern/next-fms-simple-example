@@ -69,8 +69,17 @@ export default function ContactsPage() {
           page={page}
           totalItems={state.dataInfo?.foundCount}
           itemsPerPage={limit}
-          onFirst={() => router.push(`/contacts?page=1`)}
-          onLast={() => router.push(`/contacts?page=${totalPages}`)}
+          onFirst={() => {
+            const queryString = createQueryString({ ...router.query, page: 1 });
+            router.push(`/contacts?${queryString}`);
+          }}
+          onLast={() => {
+            const queryString = createQueryString({
+              ...router.query,
+              page: totalPages,
+            });
+            router.push(`/contacts?${queryString}`);
+          }}
           onNext={() => {
             const newPage = page + 1 > totalPages ? totalPages : page + 1;
             const queryString = createQueryString({ page: newPage, search });
@@ -88,7 +97,7 @@ export default function ContactsPage() {
         onSubmit={handleSearch}
         placeholder="Search first name..."
       />
-      {search ? (
+      {search && (
         <div
           style={{
             display: 'flex',
@@ -97,8 +106,6 @@ export default function ContactsPage() {
         >
           {state.dataInfo?.foundCount || 0} results for {search}
         </div>
-      ) : (
-        ''
       )}
       <ul style={{ paddingLeft: 0 }}>
         {state?.data?.map(({ fieldData: contact, recordId }) => (
