@@ -18,6 +18,10 @@ export default async function handler(req, res) {
       result = await client.find(layout, query, parameters);
     } else {
       result = await client.list(layout, parameters);
+      res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=30, stale-while-revalidate=59'
+      );
     }
     res.status(200);
     res.json(result);
