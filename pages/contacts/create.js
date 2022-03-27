@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
-// import Link from 'next/link';
 import styles from '../../components/Layout.module.css';
 import ContactForm from '../../components/ContactForm';
 
