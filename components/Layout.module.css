@@ -1,7 +1,6 @@
 .container {
   max-width: 36rem;
   padding: 0 1rem;
-  /* margin: 3rem auto 6rem; */
   margin: auto auto 6rem;
 }
 
@@ -28,13 +27,12 @@
   margin: 2rem 1rem;
   transition: 2s;
 }
-.nav a{
+.nav a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0 10px;
 }
-
 
 .linkButton {
   color: #0070f3;
@@ -42,15 +40,10 @@
   border: none;
   font-size: 18px;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   cursor: pointer;
 }
 .linkButton:hover {
   text-decoration: underline;
 }
-
-
-
-/* .small a {
-  font-size: small;
-} */
