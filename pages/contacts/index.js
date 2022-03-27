@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ListItem from '../../components/ListItem';
 import Layout from '../../components/Layout';
-import { combineName, shortenString } from '../../lib/utils';
+import { combineName } from '../../lib/utils';
 import Button from '../../components/Button';
 import utilStyles from '../../styles/utils.module.css';
 import Pagination from '../../components/Pagination';
@@ -12,7 +12,7 @@ import { createQueryString } from '../../lib/utils';
 
 export default function ContactsPage() {
   const router = useRouter();
-  const [state, setState] = useState([]);
+  const [state, setState] = useState({});
   const page = parseInt(router.query.page);
   const search = router.query.search;
   const limit = router.query.limit || 5;
@@ -88,6 +88,18 @@ export default function ContactsPage() {
         onSubmit={handleSearch}
         placeholder="Search first name..."
       />
+      {search ? (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+          }}
+        >
+          {state.dataInfo?.foundCount || 0} results for {search}
+        </div>
+      ) : (
+        ''
+      )}
       <ul style={{ paddingLeft: 0 }}>
         {state?.data?.map(({ fieldData: contact, recordId }) => (
           <ListItem key={contact.id} onClick={() => handleLineClick(recordId)}>
