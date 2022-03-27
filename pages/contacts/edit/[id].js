@@ -35,8 +35,6 @@ export default function CrateInspectionPage(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(diff),
     });
-    const json = await res.json();
-    console.log('json', json);
     if (res.ok) router.push(`/contacts/${recordId}`);
   }
 
