@@ -13,7 +13,7 @@ import { createQueryString } from '../../lib/utils';
 export default function ContactsPage() {
   const router = useRouter();
   const [state, setState] = useState({});
-  const page = parseInt(router.query.page);
+  const page = parseInt(router.query.page) || 1;
   const search = router.query.search;
   const limit = router.query.limit || 5;
   const offset = (parseInt(page) - 1) * limit + 1;
