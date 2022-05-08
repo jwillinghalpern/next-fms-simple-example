@@ -10,6 +10,7 @@ It shows how to centrally configure and connect to fms, storing DAPI session inf
 2. Create a file called `.env.local` with these items:
 
    ```env
+   # You can get a MongoDB in the cloud for free here! https://www.mongodb.com/atlas/database
    MONGO_URL=mongodb+srv://ACCOUNT:PASSWORD@DB_NAME.sgrkc.mongodb.net/COLLECTION?retryWrites=true&w=majority
 
 
