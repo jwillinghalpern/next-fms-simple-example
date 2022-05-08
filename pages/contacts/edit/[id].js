@@ -5,7 +5,7 @@ import styles from '../../../components/Layout.module.css';
 import ContactForm from '../../../components/ContactForm.js';
 import { objectDiff, objectIsEmpty } from '../../../lib/utils';
 
-export default function CrateInspectionPage(props) {
+export default function CreateInspectionPage(props) {
   const router = useRouter();
   const [fieldData, setFieldData] = useState({});
   const [fieldDataOriginal, setFieldDataOriginal] = useState({});
