@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import styles from '../../components/Layout.module.css';
 import ContactForm from '../../components/ContactForm';
 
-export default function CrateInspectionPage() {
+export default function CreateInspectionPage() {
   const [fieldData, setFieldData] = useState({});
   const router = useRouter();
 
